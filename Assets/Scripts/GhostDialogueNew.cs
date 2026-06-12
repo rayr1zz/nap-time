@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class GhostDialogue : MonoBehaviour
+public class GhostDialogueNew : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public GameObject dialogueBorder;
@@ -106,12 +106,12 @@ public class GhostDialogue : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNear = false;
+            dialogueOpen = false;
+            dialogueIndex = 0;
+
             pressETextObject.SetActive(false);
             dialoguePanel.SetActive(false);
             dialogueBorder.SetActive(false);
-
-            dialogueOpen = false;
-            dialogueIndex = 0;
         }
     }
 }
