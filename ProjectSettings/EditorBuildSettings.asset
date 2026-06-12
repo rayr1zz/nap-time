@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/DoorRoom.unity
     guid: dc10f50f413504d1189228c841bb5a79
   - enabled: 1
+    path: Assets/Scenes/PuzzleRoom1.unity
+    guid: e3107e10a8a9b4166af9337cd9e232be
+  - enabled: 1
+    path: Assets/Scenes/PuzzleRoom2.unity
+    guid: 9731cc78b40b04ac8a03d2af91d04a80
+  - enabled: 1
     path: Assets/Scenes/Library.unity
     guid: 9610b55938055401fae99b7d55f77c38
   m_configObjects:

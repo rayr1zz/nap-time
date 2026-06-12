@@ -310,7 +310,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21960784, g: 0.10980392, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -448,7 +448,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21960784, g: 0.10980392, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -859,7 +859,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21698111, g: 0.106962524, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1031,6 +1031,7 @@ GameObject:
   - component: {fileID: 920178494}
   - component: {fileID: 920178493}
   - component: {fileID: 920178492}
+  - component: {fileID: 920178495}
   m_Layer: 0
   m_Name: Door_Left
   m_TagString: Untagged
@@ -1072,17 +1073,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.48148146, y: -1.1904762}
+    oldSize: {x: 0.27, y: 0.21}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.1, y: 0.15}
   m_EdgeRadius: 0
 --- !u!212 &920178493
 SpriteRenderer:
@@ -1133,7 +1134,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 6117720664249445767, guid: e1ed89e88582b4691aa677e631a11b09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1152,12 +1153,25 @@ Transform:
   m_GameObject: {fileID: 920178491}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 2.5, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.7, z: 1}
+  m_LocalPosition: {x: -3, y: -1.35, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &920178495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920178491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0e6d8b408b74760b1431f5d940917f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorSceneTrigger
+  sceneName: PuzzleRoom1
 --- !u!1 &1172699795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,6 +1457,7 @@ GameObject:
   - component: {fileID: 1237660426}
   - component: {fileID: 1237660425}
   - component: {fileID: 1237660424}
+  - component: {fileID: 1237660427}
   m_Layer: 0
   m_Name: Door_Right
   m_TagString: Untagged
@@ -1484,17 +1499,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.38}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5185185, y: -1.0952381}
+    oldSize: {x: 0.27, y: 0.21}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.1, y: 0.15}
   m_EdgeRadius: 0
 --- !u!212 &1237660425
 SpriteRenderer:
@@ -1545,7 +1560,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 2011592738708969981, guid: 64da8dfd778e74514bd8650c58f1ed96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1564,12 +1579,25 @@ Transform:
   m_GameObject: {fileID: 1237660423}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 2.5, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.7, z: 1}
+  m_LocalPosition: {x: 3, y: -1.15, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1237660427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237660423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0e6d8b408b74760b1431f5d940917f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorSceneTrigger
+  sceneName: PuzzleRoom2
 --- !u!1 &1288411870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,7 +1712,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21960784, g: 0.10980392, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2040,6 +2068,7 @@ GameObject:
   - component: {fileID: 1956665243}
   - component: {fileID: 1956665242}
   - component: {fileID: 1956665241}
+  - component: {fileID: 1956665244}
   m_Layer: 0
   m_Name: Door_Mid
   m_TagString: Untagged
@@ -2081,17 +2110,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.35}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.47619048, y: -1.1052631}
+    oldSize: {x: 0.21, y: 0.19}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.1, y: 0.15}
   m_EdgeRadius: 0
 --- !u!212 &1956665242
 SpriteRenderer:
@@ -2142,7 +2171,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -2151814517005063731, guid: 589081ee3e8ef44b7b5523c16d42dccc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2161,12 +2190,25 @@ Transform:
   m_GameObject: {fileID: 1956665240}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.5, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.7, z: 1}
+  m_LocalPosition: {x: 0, y: -0.75, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1956665244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956665240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0e6d8b408b74760b1431f5d940917f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorSceneTrigger
+  sceneName: Library
 --- !u!1 &2075027785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,6 +2222,7 @@ GameObject:
   - component: {fileID: 2075027788}
   - component: {fileID: 2075027787}
   - component: {fileID: 2075027791}
+  - component: {fileID: 2075027792}
   m_Layer: 0
   m_Name: GG (1)
   m_TagString: Player
@@ -2248,7 +2291,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2258,7 +2301,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.25, y: 0.35}
   m_EdgeRadius: 0
 --- !u!212 &2075027789
 SpriteRenderer:
@@ -2347,6 +2390,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownMovement
   moveSpeed: 5
+--- !u!114 &2075027792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075027785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b0526d216f74d939b8425240ee0580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TopDownSpriteAnimator
+  spriteRenderer: {fileID: 2075027789}
+  walkDownSprites:
+  - {fileID: 21300000, guid: 67785c37bfda449cbae38898347d781b, type: 3}
+  - {fileID: 21300000, guid: 369c0ae74b1d340069b6d55e084748cd, type: 3}
+  - {fileID: 21300000, guid: d8668ef57cc1b41909a8e8c09e476ca9, type: 3}
+  walkUpSprites:
+  - {fileID: 21300000, guid: 7d222f7b36ae5419d8e1e663f19de6ee, type: 3}
+  - {fileID: 21300000, guid: 95c5f79a11a284dcf979e2300c4f7b03, type: 3}
+  - {fileID: 21300000, guid: be5bebf60d6534a39835705da5a42f88, type: 3}
+  walkLeftSprites:
+  - {fileID: 21300000, guid: 1633d82905e2740898cb487ea6eb34dc, type: 3}
+  - {fileID: 21300000, guid: 7ca16a6afcdb645abaaaf8a2424fb02d, type: 3}
+  walkRightSprites:
+  - {fileID: 21300000, guid: dac322e4f70354dfb87a580887756861, type: 3}
+  - {fileID: 21300000, guid: 8b11c29c6d993412fba941ab5eea12ef, type: 3}
+  animationSpeed: 0.18
 --- !u!1 &2098592636
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,6 +2430,7 @@ GameObject:
   - component: {fileID: 2098592638}
   - component: {fileID: 2098592637}
   - component: {fileID: 2098592640}
+  - component: {fileID: 2098592641}
   m_Layer: 0
   m_Name: GhostNPC
   m_TagString: Untagged
@@ -2410,7 +2482,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.25, y: 0.25}
+  m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
 --- !u!212 &2098592638
 SpriteRenderer:
@@ -2469,7 +2541,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2098592639
 Transform:
@@ -2503,6 +2575,24 @@ MonoBehaviour:
   dialogueBorder: {fileID: 325850883}
   pressETextObject: {fileID: 1516617968}
   dialogueText: {fileID: 1172699797}
+--- !u!114 &2098592641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098592636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a43e152c59634f718864d10abe0937e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostFloatAnimation
+  spriteRenderer: {fileID: 2098592638}
+  ghostSprite1: {fileID: 21300000, guid: c6832b222456040fcb0bb5aba7cd44e7, type: 3}
+  ghostSprite2: {fileID: -7725026047319564429, guid: cece132c9251e45fc8f7caa03d5ffca5, type: 3}
+  spriteChangeSpeed: 0.3
+  floatHeight: 0.0000001
+  floatSpeed: 0.6
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
