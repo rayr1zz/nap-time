@@ -7,9 +7,9 @@ public class GhostFloatAnimation : MonoBehaviour
     public Sprite ghostSprite1;
     public Sprite ghostSprite2;
 
-    public float spriteChangeSpeed = 0.3f;
-    public float floatHeight = 0.08f;
-    public float floatSpeed = 0.6f;
+    public float spriteChangeSpeed = 0.7f;
+    public float floatHeight = 0.003f;
+    public float floatSpeed = 0.35f;
 
     private Vector3 startPosition;
     private float spriteTimer;

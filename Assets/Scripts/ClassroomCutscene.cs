@@ -29,15 +29,15 @@ public class ClassroomCutscene : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        cutsceneText.text = "Егор сидел за партой и устало смотрел на доску...";
+        cutsceneText.text = "GG sat at his desk, tiredly looking at the board...";
         yield return new WaitForSeconds(3f);
 
-        cutsceneText.text = "Глаза начали закрываться...";
+        cutsceneText.text = "His eyes began to close...";
         yield return new WaitForSeconds(2f);
 
         cutsceneImage.sprite = classroomSleep;
 
-        cutsceneText.text = "Он положил голову на парту и провалился в сон...";
+        cutsceneText.text = "He rested his head on the desk and fell into a deep sleep...";
         yield return new WaitForSeconds(3f);
 
         cutsceneText.text = "";

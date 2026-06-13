@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: privideni-inverse
     originalName: 
-    pivot: {x: 0.5833333, y: -0.48484853}
+    pivot: {x: 0.6, y: 0.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 

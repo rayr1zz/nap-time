@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class GhostDialogueNew : MonoBehaviour
 {
@@ -8,9 +9,14 @@ public class GhostDialogueNew : MonoBehaviour
     public GameObject pressETextObject;
     public TMP_Text dialogueText;
 
+    public float typingSpeed = 0.04f;
+
     private bool playerNear = false;
     private bool dialogueOpen = false;
+    private bool isTyping = false;
+
     private int dialogueIndex = 0;
+    private Coroutine typingCoroutine;
 
     private string[] dialogueLines =
     {
@@ -29,6 +35,7 @@ public class GhostDialogueNew : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialogueBorder.SetActive(false);
         pressETextObject.SetActive(false);
+        dialogueText.text = "";
     }
 
     void Update()
@@ -40,7 +47,14 @@ public class GhostDialogueNew : MonoBehaviour
 
         if (dialogueOpen && Input.GetKeyDown(KeyCode.Return))
         {
-            NextDialogueLine();
+            if (isTyping)
+            {
+                ShowFullLine();
+            }
+            else
+            {
+                NextDialogueLine();
+            }
         }
 
         if (dialogueOpen && Input.GetKeyDown(KeyCode.Escape))
@@ -58,7 +72,42 @@ public class GhostDialogueNew : MonoBehaviour
         dialoguePanel.SetActive(true);
         dialogueBorder.SetActive(true);
 
+        StartTypingLine();
+    }
+
+    void StartTypingLine()
+    {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+
+        typingCoroutine = StartCoroutine(TypeLine(dialogueLines[dialogueIndex]));
+    }
+
+    IEnumerator TypeLine(string line)
+    {
+        isTyping = true;
+        dialogueText.text = "";
+
+        foreach (char letter in line)
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        isTyping = false;
+    }
+
+    void ShowFullLine()
+    {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+
         dialogueText.text = dialogueLines[dialogueIndex];
+        isTyping = false;
     }
 
     void NextDialogueLine()
@@ -67,7 +116,7 @@ public class GhostDialogueNew : MonoBehaviour
 
         if (dialogueIndex < dialogueLines.Length)
         {
-            dialogueText.text = dialogueLines[dialogueIndex];
+            StartTypingLine();
         }
         else
         {
@@ -78,6 +127,14 @@ public class GhostDialogueNew : MonoBehaviour
     void EndDialogue()
     {
         dialogueOpen = false;
+        isTyping = false;
+
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+
+        dialogueText.text = "";
 
         dialoguePanel.SetActive(false);
         dialogueBorder.SetActive(false);
@@ -108,6 +165,14 @@ public class GhostDialogueNew : MonoBehaviour
             playerNear = false;
             dialogueOpen = false;
             dialogueIndex = 0;
+            isTyping = false;
+
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine);
+            }
+
+            dialogueText.text = "";
 
             pressETextObject.SetActive(false);
             dialoguePanel.SetActive(false);
